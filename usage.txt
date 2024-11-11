@@ -1,0 +1,6 @@
+source ./venv/bin/activate
+pip install fastapi uvicorn google-auth google-cloud-resource-manager google-api-python-client
+
+python app.py
+
+curl http://127.0.0.1:8082/check-project/bi-layer-test
