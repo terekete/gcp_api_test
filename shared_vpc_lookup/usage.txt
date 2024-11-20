@@ -1,0 +1,10 @@
+source ./venv/bin/activate
+pip install fastapi uvicorn google-auth google-cloud-compute
+
+
+export GOOGLE_APPLICATION_CREDENTIALS=./sa.json
+python app.py
+
+curl http://127.0.0.1:8000/check-service-project/<host-project>/<service-project>
+curl http://127.0.0.1:8000/check-service-project/shared-vpc-368119/bi-layer-test
+
