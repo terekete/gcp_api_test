@@ -2,3 +2,10 @@
 
 source venv/bin/activate
 pip install --resinstall "flask[async]" aiohttp asyncio python-dotenv
+
+python main.py
+python task_service.py --port 5003 --task-id 1 --task-type one
+python task_service.py --port 5004 --task-id 2 --task-type two
+
+curl http://localhost:5000/run-chain
+curl http://localhost:5000/active-chains
