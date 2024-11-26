@@ -1,0 +1,4 @@
+
+
+source venv/bin/activate
+pip install --resinstall "flask[async]" aiohttp asyncio python-dotenv
